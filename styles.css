@@ -1,0 +1,74 @@
+body {
+  margin: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.avatar {
+  width: 150px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(36 170 200 / 0.2);
+}
+
+.card {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background: #081118;
+  color: #f687af;
+  border-bottom: 25px double #24abc8;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(246 135 176 / 0.4);
+  cursor: pointer;
+}
+
+.card:hover {
+  color: #24abc8;
+  border-color: #f687af;
+}
+
+.card:hover .avatar {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes show {
+  0% {
+    letter-spacing: -0.5em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.border-blue {
+  border: 1px dotted blue;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
